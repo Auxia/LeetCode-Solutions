@@ -1,10 +1,10 @@
 # Hash Tables
-Maps keys to values for highly efficient lookup.
+Map keys to values for highly efficient lookup.
 
 ## Simple Implementation
 Use an array of linked lists and a hash code function.
 To insert a key:
-1. Compute the hash code. Usually an int or long dtype. Two different keys could have the same hash code.
+1. Compute the hash code. Usually an int or long datatype. Two different keys could have the same hash code.
 2. Map the hash code to an index in the array. E.g. `index = hash_code % array_length`.
 3. This index contains a linked list. Insert the key-value pair at the head of the list. This linked list is used in case of collisions (two keys having same hash code and hence the same index)
    
@@ -31,4 +31,13 @@ ArrayList<string> merge(String[] words, String[] more) {
     for (String w : more) sentence.add(w);
     return sentence;
 }
+```
+
+# String Builder
+A string builder is a resizable array of characters. It is used to build strings efficiently by appending characters. It is more efficient than using the `+` operator to concatenate strings.
+
+```java
+StringBuilder sentence = new StringBuilder();
+for (String w : words)
+    sentence.append(w);
 ```
